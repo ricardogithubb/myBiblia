@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.minha.biblia" version="1.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="AdMob">
+        <param name="android-package" value="admob.plus.cordova.AdMob" />
+    </feature>
+    <feature name="CDVOrientation">
+        <param name="android-package" value="cordova.plugins.screenorientation.CDVOrientation" />
+    </feature>
+    <feature name="SpeechRecognition">
+        <param name="android-package" value="com.pbakondy.SpeechRecognition" />
+    </feature>
+    <feature name="TTS">
+        <param name="android-package" value="com.wordsbaking.cordova.tts.TTS" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>Minha Bíblia</name>
+    <description>Minha Bíblia</description>
+    <author email="ricardoal.tim@gmail.com" href="https://cordova.apache.org">
+        Ricardo Alves
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <icon background="res/ldpi/background.png" density="ldpi" foreground="res/ldpi/m_biblia.png" />
+    <icon background="res/mdpi/background.png" density="mdpi" foreground="res/mdpi/m_biblia.png" />
+    <icon background="res/hdpi/background.png" density="hdpi" foreground="res/hdpi/m_biblia.png" />
+    <icon background="res/xhdpi/background.png" density="xhdpi" foreground="res/xhdpi/m_biblia.png" />
+    <icon background="res/xxhdpi/background.png" density="xxhdpi" foreground="res/xxhdpi/m_biblia.png" />
+    <icon background="res/xxxhdpi/background.png" density="xxxhdpi" foreground="res/xxxhdpi/m_biblia.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="AndroidXEnabled" value="true" />
+    <preference name="GradlePluginKotlinEnabled" value="true" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/xxhdpi/m_biblia.png" />
+    <preference name="BackgroundColor" value="43,34,170" />
+</widget>

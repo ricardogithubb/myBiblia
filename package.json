@@ -1,0 +1,41 @@
+{
+  "name": "com.my.biblia",
+  "displayName": "MyBiblia",
+  "version": "1.0.9",
+  "description": "Biblia Sagrada",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "all": "^0.0.0",
+    "cordova-android": "^12.0.1",
+    "cordova-plugin-screen-orientation": "^3.0.3",
+    "cordova-plugin-speechrecognition": "^1.2.0",
+    "cordova-plugin-tts": "^0.2.3",
+    "es6-promise-plugin": "^4.2.2"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-speechrecognition": {},
+      "cordova-plugin-tts": {},
+      "admob-plus-cordova": {
+        "APP_ID_ANDROID": "ca-app-pub-3647481067925417~2259686112",
+        "PLAY_SERVICES_VERSION": "22.1.0"
+      }
+    }
+  },
+  "dependencies": {
+    "admob-plus-cordova": "2.0.0-alpha.13",
+    "com.my.biblia": "file:"
+  }
+}

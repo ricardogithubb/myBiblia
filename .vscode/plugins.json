@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-screen-orientation","es6-promise-plugin","cordova-plugin-speechrecognition","cordova-promise-polyfill","cordova-admob-sdk","cordova-plugin-tts","cordova-plugin-extension","admob-plus-cordova"]}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="//mozilla.github.io/pdf.js/build/pdf.js"></script> -->
+    <script src="js/index.js"></script>
+    <script src="js/indexedDB.js"></script>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="h-10">
+        <div class="row m-0 h-100 w-100 ">
+            <div class="col-10 ps-3 pe-0 py-0  d-flex align-items-center">
+                <table class="w-100">
+                    <tr class="w-100">
+                        <td class="p-0" style="width: 30px;"><img src="img/de-volta.png" id="btVoltar"></td>
+                        <td class="fs-5 tituloMenu fw-bold m-0 py-0 ps-1 text-relevo">Preferências.</td>
+                    </tr>
+                    <tr class=""><td class="fsizeTLivro text-relevo m-0 py-0 ps-0" colspan="2">Defina suas Preferências</td></tr>
+                </table>
+            </div>
+            <div class="col-2 text-end d-flex p-3 align-items-center">
+                <img src="img/engrenagem-black.png" class="w-100 m-0">
+            </div>
+        </div>
+            
+    </header>
+
+    <div class="h-87 px-1 mx-2 pt-1" id="configurar">
+        
+        <section class="h-100 w-100 rounded-2 overflow-auto p-1">
+            
+            <div class="row border border-info m-0">
+                <div class="col-6 border border-info">
+                    <label for="customRange1" class="form-label">Título</label>
+                    <input type="range" class="form-range" min="0" max="1" step="0.2" id="customRange1">
+                </div>
+                <div class="col-6 border border-info p-0 d-flex align-items-center" id="tamFontTitulo">
+                    <span class="badge text-bg-white text-relevo fsizeTCapitulo w-100 text-start px-1 titulosCapitulos">Tam. Letra</span>
+                </div>
+            </div>
+                          
+        </section>
+
+    </div>
+    
+
+    <footer class="h-3">
+
+    </footer>
+
+    <!-- <footer class="h-10 px-3 py-0 shadow border rounded-top bg-tp-100">
+        <div class="h-100 py-2 px-2"> 
+            <div class="row m-1 h-100">
+                <div class="col-3 border border-black">
+
+                </div>
+                <div class="col-3 border border-black">
+
+                </div>
+                <div class="col-3 border border-black">
+
+                </div>
+                <div class="col-3 border border-black">
+
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    
+</body>
+<script src="cordova.js"></script> 
+<!-- <script src="js/admob.js"></script> -->
+</html>
+
+<!-- Modal -->
+<div class="modal fade" id="modalFalar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalFalarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center h-100">
+      <div class="modal-content bg-transp w-50 h-25 p-0 border-0">
+        <div class="modal-body bg-transp p-0 w-100 h-50 rounded-circle text-center d-flex justify-content-center align-items-center">
+            <table class="text-white w-100" id="eventFalando">
+                <tr>
+                    <td id="imgAnimacao">
+                        <img class="w-100 rounded-circle" src="img/fala.gif">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="fs-6" id="textoModal">
+                    </td>
+                </tr>
+            </table>
+            
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "admob-plus-cordova": {
+      "APP_ID_ANDROID": "ca-app-pub-3647481067925417~2259686112",
+      "PLAY_SERVICES_VERSION": "22.1.0",
+      "PACKAGE_NAME": "com.minha.biblia"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.minha.biblia"
+    },
+    "cordova-plugin-speechrecognition": {
+      "PACKAGE_NAME": "com.minha.biblia"
+    },
+    "cordova-plugin-tts": {
+      "PACKAGE_NAME": "com.minha.biblia"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.minha.biblia"
+    }
+  }
+}

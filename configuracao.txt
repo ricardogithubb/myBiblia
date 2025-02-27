@@ -1,0 +1,9 @@
+﻿cordova build android --prod --release -- --packageType=bundle
+
+keytool -genkey -v -keystore minhabiblia.keystore -alias minhabiblia -keyalg RSA -keysize 2048 -validity 10000
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore minhabiblia.keystore C:\wamp64\www\mybibliaV01\mybiblia\platforms\android\app\build\outputs\bundle\release\app-release.aab minhabiblia
+
+C:\wamp64\www\mybibliaV01\mybiblia\platforms\android\app\build\outputs\bundle\release\
+
+mbiblia8000@

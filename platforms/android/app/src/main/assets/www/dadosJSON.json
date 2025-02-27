@@ -1,0 +1,78 @@
+{
+  "parametros": {
+    "whatsapp": "5537999158437"
+  },
+  "louvores": {
+	  "ativo": false,
+	  "titulos":  [{
+					  "nome": "Eu Sou Teu Pai",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "Jesus Sempre Tem Mais",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "És o Amor",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "Cuido dos Detalhes",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "Pode Morar Aqui",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "Jesus Sempre Tem Mais",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "És o Amor",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "Cuido dos Detalhes",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "Pode Morar Aqui",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "Jesus Sempre Tem Mais",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "És o Amor",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "Cuido dos Detalhes",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   },
+				   {
+					  "nome": "Pode Morar Aqui",
+					  "cantor": "Contor desconhecido",
+					  "link": "link"
+				   }]
+  },
+  "atualizar": {
+	  "status": true,
+	  "version": "1.0.3",
+	  "link": "https://play.google.com/store/apps/details?id=com.minha.biblia"
+  }
+}

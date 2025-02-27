@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src='https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js'></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<!-- <body>
+  <input type="file" id="imagemInput" accept="image/*">
+  <canvas id="imagemCanvas" style="display:none;"></canvas>
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById('imagemInput').addEventListener('change', function (e) {
+      const imagem = e.target.files[0];
+      if (!imagem) return;
+
+      const canvas = document.getElementById('imagemCanvas');
+      const ctx = canvas.getContext('2d');
+
+      const resultadoElement = document.getElementById('resultado');
+      resultadoElement.textContent = 'Processando...';
+
+      const img = new Image();
+      img.onload = function () {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+
+        const worker = new Tesseract.createWorker();
+
+        (async () => {
+          await worker.load();
+          await worker.loadLanguage('pt'); // Língua: inglês
+          await worker.initialize('pt');
+          const { data: { text } } = await worker.recognize(canvas);
+          resultadoElement.textContent = text;
+          await worker.terminate();
+        })();
+      };
+
+      img.src = URL.createObjectURL(imagem);
+    });
+  </script>
+</body>
+</html> -->
+<body class="px-2 h-100">
+  <input type="file" id="imagemInput" accept="image/*" multiple>
+  <canvas id="imagemCanvas" style="display:none;"></canvas>
+  <div class="border h-90 fs-4 text-justify bg-white shadow p-2" id="resultado"></div>
+
+  <script>
+        
+        var livros = {registros: []};
+
+        function baseDados(){
+        return new Promise(async (resolve, reject) => {
+       
+            // var fileUrl = "Livros da Bíblia.csv";
+            var fileUrl = "https://ricardogithubb.github.io/biblia/referencias_biblia_img.csv";
+
+            $.get(fileUrl, function(data) {
+                var lines = data.split("\n");
+    
+                var output = $("#output");
+                output.empty(); // Limpar o conteúdo anterior
+    
+                lines.forEach(function(line) {
+                line = line.replace(/\r/g, "");
+                var lineElement = line.split(';');
+                    var nome = lineElement[0];
+                    var capitulo = lineElement[1];
+                    var versiculo_ini = lineElement[2];
+                    var versiculo_fin = lineElement[3];
+                    var arquivo = lineElement[4];
+                // Popular o array com vários registros (objetos)
+                livros.registros.push({ livro: nome, capitulo: capitulo, versiculo_ini: versiculo_ini, versiculo_fin: versiculo_fin,arquivo: arquivo });
+                
+                });
+
+                resolve();
+
+                console.log(livros);
+            });
+
+        })
+
+    }
+
+    baseDados();
+
+    document.getElementById('imagemInput').addEventListener('change', function (e) {
+        
+        const arquivos = e.target.files;
+
+        var textoComQuebrasDeLinha = '';
+
+        for (let i = 0; i < arquivos.length; i++) { 
+
+                const imagem = arquivos[i];
+                if (!imagem) return;
+
+                const canvas = document.getElementById('imagemCanvas');
+                const ctx = canvas.getContext('2d');
+
+                const resultadoElement = document.getElementById('resultado');
+                resultadoElement.textContent = 'Processando...';
+
+                const img = new Image();
+                img.onload = function () {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+
+                    (async () => {
+                    const { data: { text } } = await Tesseract.recognize(
+                        canvas,
+                        'por', // Língua: inglês
+                        { logger: (m) => console.log(m) } // Opcional: para depuração
+                    );
+                    texto = text;
+
+                    textoComQuebrasDeLinha += texto.replace(/\n/g, '<br>');
+
+                    $("#resultado").html(textoComQuebrasDeLinha.replace('<br><br>','<br>'));
+
+                    })();
+                };
+
+                setTimeout(() => {
+                    img.src = URL.createObjectURL(imagem);
+                }, 2000); 
+
+        }
+
+        
+      
+    });
+  </script>
+</body>
+</html>
+
